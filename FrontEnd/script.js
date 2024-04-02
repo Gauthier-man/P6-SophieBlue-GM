@@ -15,7 +15,7 @@ fetch('http://localhost:5678/api/works')
     const img = document.createElement("img");
     img.src = data[i].imageUrl;
     img.alt = data[i].title;
-    figure.appendChild(img); //commentaire
+    figure.appendChild(img); //
    
     const figcaption = document.createElement("figcaption")
     figcaption.innerHTML = data[i].title;
