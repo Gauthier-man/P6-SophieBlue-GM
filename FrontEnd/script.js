@@ -1,3 +1,9 @@
+
+//Récupérer dynamiquement les projets de l’architecte
+
+
+//Function avec la boucle, puis dans la function on appelle dans le fetch
+
 fetch('http://localhost:5678/api/works')
   .then(response => response.json())
   .then(data => {
@@ -7,7 +13,7 @@ fetch('http://localhost:5678/api/works')
 
   const gallery = document.querySelector(".gallery");
 
-  // Ajouter les nouveaux travaux récupérés depuis l'API
+  // Ajouter à la galerie les nouveaux travaux récupérés depuis l'API
   for (let i = 0; i < data.length; i++) {
   
     const figure = document.createElement("figure");
@@ -25,6 +31,9 @@ fetch('http://localhost:5678/api/works')
 
   })
 
+//Filtre : id, comparaison == "Functional Programming" Use the filter Method to Extract Data from an Array, 'filter' ' 
+
+ 
   .catch(error => {
     console.error('Erreur lors de la récupération des données :', error);
   });
