@@ -1,10 +1,6 @@
 
 
-// Fonction pour afficher la fenêtre modale et la section de mode édition
-function openModal() {
-  document.getElementById("modal").style.display = "block";
-  document.querySelector(".hidden").style.display = "block";
-}
+
 
 
 
@@ -38,7 +34,7 @@ document.addEventListener("submit", async (e) => {
       console.log(data)
       localStorage.setItem("token", data.token);
       window.location.href = "index.html";
-      openModal(); // Afficher la fenêtre modale
+      
       alert("Vous êtes maintenant connecté !");
   }
   // Comparaison avec les informations de connexion de Sophie Bluel

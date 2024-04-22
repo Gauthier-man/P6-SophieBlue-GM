@@ -53,8 +53,17 @@ fetch('http://localhost:5678/api/works')
   });
 
 
+  // Fonction pour afficher la fenêtre modale et la section de mode édition
+function openModal() {
+  document.getElementById("modeEdition").style.display = "block";
+  document.querySelector(".hidden").style.display = "block";
+}
 
+if (localStorage.getItem("token")){
 
+  openModal();
+
+}
 
  
 // Sélectionner l'élément HTML avec la classe "btn-center"
