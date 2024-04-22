@@ -20,6 +20,7 @@ document.addEventListener("submit", async (e) => {
       });
     // Comparaison avec les informations de connexion de Sophie Bluel
           if (email === 'sophie.bluel@test.tld' && password === 'S0phie') {
+                
               // Redirection vers la page d'accueil
               window.location.href = 'index.html';
           } else {

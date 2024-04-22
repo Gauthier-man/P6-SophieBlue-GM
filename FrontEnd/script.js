@@ -34,12 +34,14 @@ function createGallery(data) {
 }
 
 
+
 // Effectuer une requête fetch pour récupérer les données des travaux depuis l'API
 fetch('http://localhost:5678/api/works')
   .then(response => response.json()) // Attendre la réponse et la transformer en format JSON
   .then(data => {   // Une fois les données obtenues, exécuter cette fonction
     worksData = data; // Stocker les données des travaux dans la variable globale
     createGallery(data);  // Créer la galerie en utilisant les données récupérées
+    createModale(data);
 
     // Manipulations supplémentaires des données récupérées peuvent être effectuées ici
     console.log(data); // Pour vérifier les données récupérées dans la console
