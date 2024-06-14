@@ -1,4 +1,3 @@
-
 let worksData; // Variable globale pour stocker les données des travaux
 
 //Récupérer dynamiquement les projets de l’architecte
@@ -60,12 +59,71 @@ function openModal() {
 }
 
 if (localStorage.getItem("token")){
-
-  openModal();
+    document.getElementById("modeEdition").classList.remove("hidden");
+    modifier();
+    document.getElementById("logoutButton").href = "index.html";
+    // classList.add
 
 }
 
+
+
+// Fonction pour déconnecter l'utilisateur
+function logout() {
+  // Supprimer le token du localStorage
+  localStorage.removeItem("token");
+  
+   // Modifier le texte du lien de connexion
+  //  document.getElementById("logoutButton").textContent = "Login";
+  // Rediriger l'utilisateur vers une page de déconnexion ou une autre page appropriée
+  // Remplacez "logout.html" par l'URL de votre choix
  
+}
+
+
+document.getElementById("logoutButton").addEventListener("click", logout);
+
+
+// Vérifier si l'utilisateur est déjà connecté au chargement de la page
+window.onload = function() {
+  if (localStorage.getItem("token")) {
+    // Modifier le texte du lien de connexion si l'utilisateur est connecté
+    document.getElementById("logoutButton").textContent = "logout";
+    logoutButton.classList.add("nav-li");
+  }
+};
+
+
+function modifier() {
+
+// Sélection de l'élément avec l'ID "portfolio"
+const portfolioSection = document.getElementById("portfolio");
+
+// Création de l'élément <i> avec les classes spécifiées
+const iconElement = document.createElement("i");
+iconElement.className = "fa-regular fa-pen-to-square";
+
+// Création de l'élément <p> avec le texte "modifier"
+const textElement = document.createElement("p");
+textElement.textContent = "modifier";
+
+// Ajout de l'élément <i> et de l'élément <p> à l'élément avec la classe "portfolio-modify"
+const portfolioModifyDiv = portfolioSection.querySelector(".portfolio-modify");
+portfolioModifyDiv.appendChild(iconElement);
+portfolioModifyDiv.appendChild(textElement);
+
+// Ajout d'un gestionnaire d'événements au paragraphe pour afficher l'interface lorsque cliqué
+textElement.addEventListener("click", function() {
+  // Afficher l'interface
+  const modal = document.querySelector(".modal");
+  modal.style.display = "block";
+});
+
+
+
+}
+
+
 // Sélectionner l'élément HTML avec la classe "btn-center"
 const btnCenterContainer = document.querySelector('.btn-center');
 
@@ -123,7 +181,3 @@ function handleButtonClick(event) {
   createGallery(filteredWorks); // Créer la galerie avec les travaux filtrés
 
 }
-
-
-
-

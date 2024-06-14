@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 document.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -32,6 +25,7 @@ document.addEventListener("submit", async (e) => {
     if (response.status === 200) {
       const data = await response.json();
       console.log(data)
+      // Deco clear localStorage (logout)
       localStorage.setItem("token", data.token);
       window.location.href = "index.html";
       
@@ -58,4 +52,3 @@ document.addEventListener("submit", async (e) => {
     console.error("Erreur lors de la soumission du formulaire :", error);
   }
 });
-  

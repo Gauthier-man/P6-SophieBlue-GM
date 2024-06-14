@@ -10,6 +10,8 @@ const modalContent= document.querySelector(".modalContent");
   
     
     const figure = document.createElement("figure"); // Créer un élément "figure" pour chaque image
+    const miniWork = document.querySelector("miniWork")
+    
     modalContent.appendChild(figure);// Ajouter la figure à la galerie
     const img = document.createElement("img");   // Créer un élément "img" pour afficher l'image
     img.src = data[i].imageUrl; // Définir la source de l'image
@@ -24,3 +26,16 @@ const modalContent= document.querySelector(".modalContent");
   }
 
 }
+
+// Fenêtre Modal :
+
+// Sélection de l'élément avec la classe "cross"
+const crossElement = document.querySelector(".cross");
+
+// Ajout d'un gestionnaire d'événements pour le clic sur la croix
+crossElement.addEventListener("click", function() {
+    // Sélection de la fenêtre modale
+    const modal = document.querySelector(".modal");
+    // Masquer la fenêtre modale en changeant son style d'affichage
+    modal.style.display = "none";
+});

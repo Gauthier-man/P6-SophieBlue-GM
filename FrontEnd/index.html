@@ -23,7 +23,13 @@
     <script src="modale.js" defer></script>
   </head>
   <body>
-    <section class="modal">
+    <section id="modeEdition" class="mode-edition hidden">
+      <div class="logo">
+        <i class="fa-regular fa-pen-to-square"></i>
+        <p class="modify">Mode édition</p>
+      </div>
+    </section>
+    <div class="modal">
       <div class="container">
         <div class="cross"><i class="fa-solid fa-xmark"></i></div>
         <h3 class="modalTitle">Galerie photo</h3>
@@ -31,14 +37,7 @@
         <div class="bar"></div>
         <div class="addPictureBtn">Ajouter une photo</div>
       </div>
-    </section>
-
-    <section id="modeEdition" class="mode-edition hidden">
-      <div class="logo">
-        <i class="fa-regular fa-pen-to-square"></i>
-        <p class="modify">Mode édition</p>
-      </div>
-    </section>
+    </div>
     <header>
       <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
       <nav>
@@ -49,7 +48,7 @@
           <a>
             <li>contact</li>
           </a>
-          <a href="login.html">
+          <a id="logoutButton" href="login.html">
             <li>login</li>
           </a>
           <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
@@ -80,8 +79,8 @@
       <section id="portfolio">
         <div class="portfolio-modify">
           <h2>Mes Projets</h2>
-          <i class="fa-regular fa-pen-to-square"></i>
-          <p>modifier</p>
+          <!-- <i class="fa-regular fa-pen-to-square"></i>
+          <p>modifier</p> -->
         </div>
         <div class="btn-center"></div>
 

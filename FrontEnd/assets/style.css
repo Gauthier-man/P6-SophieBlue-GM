@@ -391,6 +391,8 @@ a {
 }
 
 
+
+
 .addPictureBtn {
 	width: auto;
 	padding: 10px 49px;
@@ -405,4 +407,10 @@ a {
     font-size: 1.2em;
   
 }
+
+.portfolio-modify p {
+    cursor: pointer;
+}
+
+
 
